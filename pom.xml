@@ -25,7 +25,22 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka -->
+      <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>kafka-clients</artifactId>
+          <version>0.8.2.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>kafka_2.10</artifactId>
+          <version>0.8.2.1</version>
+      </dependency>
   </dependencies>
+
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
