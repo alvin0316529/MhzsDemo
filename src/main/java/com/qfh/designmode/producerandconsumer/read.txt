@@ -1,0 +1,13 @@
+1.生产者和消费者：
+生产者生产数据到缓冲区中，消费者从缓冲区中取数据
+如果缓冲区已经满了，则生产者线程阻塞
+如果缓冲区为空，那么消费者线程阻塞
+
+2.生产者-消费者模式的三种实现方式
+方式一：synchronized、wait和notify
+方式二：lock和condition的await、signalAll
+方式三、BlockingQueue
+
+
+
+
