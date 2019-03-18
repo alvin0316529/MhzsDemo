@@ -72,6 +72,8 @@ public class SecondarySort {
         //指定map类
         job.setMapperClass(LineProcessMapper.class);
         //指定partition类
+        job.setPartitionerClass(FirstPartitioner.class);
+        job.setGroupingComparatorClass(GroupComparator.class);
 
         //指定reduce类
         job.setReducerClass(SortReducer.class);
