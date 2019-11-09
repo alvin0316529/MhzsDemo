@@ -9,15 +9,17 @@ object WordCountStreaming {
     val sc = new SparkContext(conf)
     val ssc = new StreamingContext(sc,Seconds(5))
     //=============================
-    val lines = ssc.socketTextStream("master01.bigdata",9999)
+    val lines = ssc.socketTextStream("localhost",9999)
 
     val wordcountStream = lines.flatMap(line => line.split(" "))
                                .map(word => (word,1))
                                .reduceByKey(_+_)
+
+    wordcountStream.print()
     //============================
 
-    ssc.stop()
-    sc.stop()
+    ssc.start()
+    ssc.awaitTermination()
 
   }
 }
