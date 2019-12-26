@@ -10,7 +10,7 @@ import java.util.Properties;
 public class ConsumerTest {
     public static void main(String[] args) {
         String topicName = "kfk_topic";
-        String groupId = "group1";
+        String groupId = "group2";
         //构造java.util.Properties对象
         Properties props = new Properties();
         // 必须指定属性。
